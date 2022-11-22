@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Board</title>
+</head>
+<body>
+<div th:each="dto:${boardData}">
+		
+		<span th:text="${dto.idx}"></span>/ 
+		<span th:text="${dto.boardcode}"></span>/
+		<a th:href="@{readBoard(boardCode=${dto.boardcode})}"><span th:text="${dto.boardname}"></span></a>/
+		 <span th:text="${dto.regdate}"></span>/
+		 <a th:href="@{deleteBoard(boardcode=${dto.boardcode})}">삭제</a>/ 
+		<a th:href="@{updateBoard(idx=${dto.idx})}">수정</a>/ 
+		
+	</div>
+</body>
+</html>

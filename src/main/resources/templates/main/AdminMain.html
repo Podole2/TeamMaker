@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" type="text/css" th:href="@{/css/main.css}">
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<title>TeamMaker Main</title>
+</head>
+<body>
+	<header>
+		<div class="headerLeft">
+			<h1>TeamMaker Admin Main</h1>
+		</div>
+		<div class="headerRight">
+			
+			<span th:text="${session.loginedUser.name}"></span>
+			<a href="logout">LogOut</a>
+		</div>
+
+	</header>
+	<br>
+	<hr>
+	<br>
+
+	<a href="users/userMain">회원 관리</a>
+	<a href="boards/boardMain">게시판 관리</a>
+</body>
+</html>

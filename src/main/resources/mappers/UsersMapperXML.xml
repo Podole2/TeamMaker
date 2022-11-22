@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tk.practice.mapper.UsersMapper">
+	<insert id="insertUser">
+		insert into Users values (null, #{name}, #{userid}, #{passwd}, #{email}, #{mobile}, #{bday})
+	</insert>
+	<update id="updateUser">
+		update Users set name=${name}, userid=${userid}, passwd=${passwd}, email=${email}, mobile=${mobile}, bday=${bday} where idx=#{idx}
+	</update>
+	<delete id="deleteUser">
+		delete from Users where idx=#{idx}
+	</delete>
+	<select id="selectUser" resultType="com.tk.practice.dto.UsersDTO">
+		select * from Users where idx=#{idx}
+	</select>
+	<select id="selectUserAll" resultType="com.tk.practice.dto.UsersDTO">
+		select * from Users
+	</select>
+	<select id="selectUserCnt" resultType="Integer">
+		select count(idx) from Users
+	</select>
+	<select id="loginUser" resultType="com.tk.practice.dto.UsersDTO">
+		SELECT * FROM Users WHERE userid = #{userid} AND passwd = #{passwd}
+	</select>
+</mapper>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<html>
+<head>
+<meta charset="utf-8">
+<title>Board Main</title>
+</head>
+<body>
+	Board Manager
+	<br>
+	<form action="/boards/buildBoardProc" method="post">
+		BoardCode:<input type="text" name="boardcode"><br> 
+		BoardName:<input type="text" name="boardname"><br> 
+		
+		
+		<input type="submit" value="게시판 생성">
+	</form>
+	<br><hr>
+	
+	<h1>Board List</h1>
+	<br><hr>
+	<div th:each="dto:${boardData}">
+		
+		<span th:text="${dto.idx}"></span>/ 
+		<span th:text="${dto.boardcode}"></span>/
+		<a th:href="@{readBoard(boardCode=${dto.boardcode})}"><span th:text="${dto.boardname}"></span></a>/
+		 <span th:text="${dto.regdate}"></span>/
+		 <a th:href="@{deleteBoard(boardcode=${dto.boardcode})}">삭제</a>/ 
+		<a th:href="@{updateBoard(boardcode=${dto.boardcode})}">수정</a>/ 
+		
+	</div>
+	
+</body>
+</html>
