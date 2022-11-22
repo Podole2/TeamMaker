@@ -11,3 +11,7 @@ header{
 	flex-direction: row;
 	justify-content: space-between;
 }
+
+.headerLeft{
+	background-color: #f1f1f1;
+}
