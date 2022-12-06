@@ -1,17 +1,203 @@
 @charset "EUC-KR";
 
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap");
+
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	font-family: "Noto Sans KR", sans-serif;
+}
+
+a{
+	text-decoration: none;
+	color: black;
+}
+
+a:hover{
+	font-weight: bold;
 }
 
 header{
+	width: 100%;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
+	box-shadow: 0px 5px 5px -5px #26257e;
+	
 }
 
-.headerLeft{
+/* main  */
+
+.mainContainer{
+	width: 800px;
 	background-color: #f1f1f1;
+	margin: 0 auto;
+	margin-top: 200px;
+	padding: 20px;
 }
+
+.mainLogo{
+	height: 100px;
+}
+
+
+.loginMenu{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	background-color: tomato;
+	padding: 10px;
+	height: 100px;
+}
+
+.signInBox{
+	width: 360px;
+	
+}
+
+.loginBox{
+	width: 360px;
+	
+}
+
+/* adminMain */
+
+.adminMainContainer{
+	margin: 0 auto;
+	width: 1440px;
+	height: 800px;
+	margin-top : 100px;
+	padding: 20px 40px;
+	box-shadow: 0px 0px 5px grey;
+	align-content: center;
+	align-items: center;
+	
+}
+
+
+
+.headerLeft{}
+
+.headerRight{
+	align-content: center;
+	align-items: center;
+	
+	line-height: 46px;
+}
+
+.headerRight a{
+	margin-left:100px;
+}
+
+.adminMainBody{
+	display: flex;
+	flex-direction: row;
+}
+
+.sideNavBox{
+	width: 240px;
+	box-shadow: 5px 0px 5px -5px #26257e;
+}
+
+.sideNavbar{
+	width: 100%;
+	display: grid;
+  grid-template-rows: repeat(15, 48px);
+  
+}
+
+.sideNavMenu{
+	padding: 30px 5px;
+	font-size: 20px;
+}
+
+.sideNavMenu:nth-child(1),
+.sideNavMenu:nth-child(6),
+.sideNavMenu:nth-child(10)
+ {
+font-size: 24px;
+padding-left: 10px
+}
+
+.sideNavMenu:nth-child(2),
+.sideNavMenu:nth-child(3),
+.sideNavMenu:nth-child(4),
+.sideNavMenu:nth-child(5),
+.sideNavMenu:nth-child(7),
+.sideNavMenu:nth-child(8),
+.sideNavMenu:nth-child(9),
+.sideNavMenu:nth-child(11),
+.sideNavMenu:nth-child(12){
+	padding-left: 30px;
+	font-size: 20px;
+}
+
+
+
+/* register form */
+
+.registerContainer{
+	width: 600px;
+	
+	margin: 0 auto;
+	margin-top: 200px;
+	padding: 20px;
+	
+	
+	box-shadow: 0px 0px 5px #4b49ac;
+}
+
+.registerBox{
+	text-align: center;
+	
+}
+
+.registerTitle{
+	text-align: center;
+	padding: 10px;
+}
+
+.registerBox table,
+.registerBox tr,
+.registerBox td{
+	border-collapse: collapse;
+	border: 1px solid white;
+	padding: 5px;
+	
+}
+
+.registerBox tr{
+	
+	font-size: 24px;
+	
+}
+
+.registerBox td:nth-child(1) {
+	width: 150px;
+	font-size: 24px;
+	justify-content: center;
+	align-items: center;
+}
+
+.registerBox td:nth-child(2) {
+	width: 450px;
+	font-size: 24px;
+}
+
+.registerBox input{
+	width: 100%;
+	background-color: #e0dfff;
+	
+	font-size: 20px;
+	border: 1px solid white;
+	padding: 5px 20px;
+	border: 1px solid none;
+}
+
+.registerBox input:focus {
+	outline: none;
+}
+
+
+

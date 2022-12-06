@@ -69,7 +69,7 @@ public class MainController {
 		return "users/registerUser"; // write.html 파일
 	}
 
-	@PostMapping("/registerProc")
+	@PostMapping("users/registerProc")
 	public String registProc(UsersDTO dto) {
 
 		udao.insertUser(dto);
