@@ -8,23 +8,65 @@
 <title>TeamMaker Main</title>
 </head>
 <body>
-<a href="/">home</a>
-	<header>
-		<div class="headerLeft">
-			<h1>TeamMaker Admin Main</h1>
+	<div class="adminMainContainer">
+		<header>
+			<div class="headerLeft">
+				<h1>TeamMaker Admin</h1>
+			</div>
+			<div class="headerRight">
+				
+				Welcome! <span th:text="${session.loginedUser.name}"></span>님 
+				<a href="logout">LogOut</a>
+			</div>
+		</header>
+		
+			<div class="adminMainBody">
+				<div class="sideNavBox" >
+					<div class="sideNavbar">	
+					    <div class="sideNavMenu">
+						    <a href="users/userMain">Member Main</a>
+						</div>
+						<div class="sideNavMenu">
+						    <a href="users/userMain">Member List</a>
+						</div>
+						<div class="sideNavMenu">
+						    <a href="users/userMain">Register Member</a>
+						</div>
+						<div class="sideNavMenu">
+						    <a href="users/userMain">Gotcha!</a>
+						</div>
+						<div class="sideNavMenu">
+						   
+						</div>
+						
+						<div class="sideNavMenu">
+						    <a href="boards/boardMain">Team Main</a>
+						</div>
+						<div class="sideNavMenu">
+						    <a href="boards/boardMain">Team List</a>
+						</div>
+						<div class="sideNavMenu">
+						    <a href="boards/boardMain">Create Team</a>
+						</div>
+						<div class="sideNavMenu">
+						   
+						</div>
+						<div class="sideNavMenu">
+						    <a href="boards/boardMain">Board Main</a>
+						</div>
+						<div class="sideNavMenu">
+						    <a href="boards/boardMain">Board List</a>
+						</div>
+						<div class="sideNavMenu">
+						    <a href="boards/boardMain">Create Board</a>
+						</div>
+					</div>	
+				</div>
+			<div class="adminMainContent">
+				Content
+			</div>
 		</div>
-		<div class="headerRight">
-			
-			<span th:text="${session.loginedUser.name}"></span>
-			<a href="logout">LogOut</a>
-		</div>
-
-	</header>
-	<br>
-	<hr>
-	<br>
-
-	<a href="users/userMain">회원 관리</a>
-	<a href="boards/boardMain">게시판 관리</a>
+		
+	</div>
 </body>
 </html>

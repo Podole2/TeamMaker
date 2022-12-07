@@ -1,11 +1,21 @@
 package com.tk.practice.dto;
 
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Pattern;
+
 public class UsersDTO {
 
 	public int idx;
+
+	@NotBlank(message = "아이디는 필수 입력 값입니다.")
 	public String name;
+
 	public String userid;
+
+	@NotBlank(message = "비밀번호는 필수 입력 값입니다.")
+	@Pattern(regexp = "(?=.*[0-9])(?=.*[a-zA-Z])(?=.*\\W)(?=\\S+$).{8,16}", message = "비밀번호는 8~16자 영문 대 소문자, 숫자, 특수문자를 사용하세요.")
 	public String passwd;
+
 	public String email;
 	public String mobile;
 	public String bday;

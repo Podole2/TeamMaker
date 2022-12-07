@@ -1,10 +1,16 @@
 <!DOCTYPE html>
-<html>
-<head>
-<meta charset="EUC-KR">
-<title>Insert title here</title>
-</head>
-<body>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+	<div th:fragment="headerFragment" class="header">
+		<header>
+		<div class="headerLeft">
+			<h1>TeamMaker Admin Main</h1>
+		</div>
+		<div class="headerRight">
+			
+			<span th:text="${session.loginedUser.name}"></span>
+			<a href="logout">LogOut</a>
+		</div>
 
-</body>
+	</header>
+	</div>
 </html>

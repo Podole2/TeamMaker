@@ -5,7 +5,14 @@
 <title>회원 관리</title>
 </head>
 <body>
-	<h1>회원 관리</h1><br><hr><br>
+	<h1>회원 관리</h1><br>
+	<a href="/AdminMain">home</a>
+	<div class="headerRight">
+			
+			<span th:text="${session.loginedUser.name}"></span>
+			<a href="logout">LogOut</a>
+		</div>
+		<hr><br>
 	<a href="userList">회원 목록 보기</a>
 	<a href="registerUser">회원 등록 하기</a>
 </body>
